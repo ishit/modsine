@@ -1,0 +1,166 @@
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Modulated Periodic Activations</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+    Modulated Periodic Activations for <br/> Generalizable Local Functional Representations</br>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://scholar.google.co.in/citations?user=pUqhY-wAAAAJ&hl=en">
+                            Ishit Mehta
+                        </a>
+                        </br>UCSD
+                    </li>
+                    <li>
+                        <a href="http://www.mgharbi.com">
+                            Micha&euml;l Gharbi
+                        </a>
+                        </br>Adobe
+                    </li>
+                    <li>
+                        <a href="http://www.connellybarnes.com/">
+                            Connelly Barnes
+                        </a>
+                        </br>Adobe
+                    </li>
+                    <li>
+                        <a href="https://research.adobe.com/person/eli-shechtman/">
+                            Eli Schechtman
+                        </a>
+                        </br>Adobe
+                    </li>
+                    <li>
+                        <a href="https://cseweb.ucsd.edu/~ravir/">
+                            Ravi Ramamoorthi
+                        </a>
+                        </br>UCSD
+                    </li>
+                    <li>
+                        <a href="https://cseweb.ucsd.edu/~mkchandraker/">
+                            Manmohan Chandraker
+                        </a>
+                        </br>UCSD
+                    </li>
+                </ul>
+            </div>
+        </div>
+         <div class="row" id="header_img"> 
+             <!--<figure class="col&#45;md&#45;5 col&#45;md&#45;offset&#45;3"> -->
+             <figure class="col&#45;md&#45;4 col&#45;md&#45;offset&#45;4"> 
+             <image src="img/teaser.png" class="img&#45;responsive" alt="overview"> 
+                 <figcaption> 
+                 </figcaption> 
+             </figure> 
+         </div> 
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h3>
+                    Overview
+                </h3>
+                <p class="text-justify">
+                    Multi-Layer Perceptrons (MLPs) make powerful functional representations for
+                    sampling and reconstruction problems involving low-dimensional signals like
+                    images, shapes and light fields.
+                    Recent works have significantly improved their ability to represent
+                    high-frequency content by using periodic activations or positional encodings.
+                    This often came at the expense of generalization: modern methods are typically
+                    optimized for a single signal.
+                    We present a new representation that generalizes to multiple
+                    instances and achieves state-of-the-art fidelity.
+                    We use a dual-MLP architecture to encode the signals.
+                    A synthesis network creates a functional mapping from
+                    a low-dimensional input (e.g. pixel-position) to the output domain (e.g. RGB color).
+                    A modulation network maps a latent code corresponding to the target signal to parameters
+                    that modulate the periodic activations of the synthesis network.
+                    We also propose a local-functional representation which enables generalization.
+                    The signal's domain is partitioned into
+                    a regular grid, with each tile represented by a latent code.
+                    At test time, the signal is encoded with high-fidelity by inferring (or
+                    directly optimizing) the latent code-book.
+                    Our approach produces generalizable functional representations of images, videos
+                    and shapes, and achieves higher reconstruction quality than prior works that
+                    are optimized for a single signal.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h3>
+                <!-- <h3 class="text&#45;center"> -->
+                    Downloads
+                </h3>
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="main.html">
+                                Paper
+                            </a>
+                        </li>
+                        <li>
+                            <a href="main.html">
+                                Code (Soon)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h3>
+                    BibTeX
+                </h3>
+                    <div class="form-group col-md-10 col-md-offset-1">
+						<textarea id="bibtex" class="form-control" readonly>
+@article{mehta2021modsiren,
+	title={Modulation Periodic Activations for Generalizable Local Functional Representations},
+	author={Mehta, Ishit and Gharbi, Michael and Barnes, Connelly and Schechtman, Eli and Ramamoorthi, Ravi and Chandraker, Manmohan},
+	journal={arXiv preprint},
+	year={2021}
+}</textarea>
+</div>
+            </div>
+        </div>
+		<!--<div class="row">-->
+			<!--<div class="col-md-6 col-md-offset-3">-->
+				<!--<h3>-->
+					<!--Acknowledgements-->
+				<!--</h3>-->
+				<!--<p class="text-justify">-->
+				<!--Acknowledgements-->
+				<!--</p>-->
+			<!--</div>-->
+		<!--</div>-->
+    </div>
+</body>
+</html>
