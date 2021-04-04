@@ -2,13 +2,13 @@
     font-size: .8em;
 }
 
-/*.CodeMirror-scroll {*/
-    /*overflow-y: hidden;*/
-    /*overflow-x: auto;*/
-/*}*/
+.CodeMirror-scroll {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
 
-/*#header_img {*/
-    /*margin-top: 2em;*/
-    /*margin-bottom: 1em;*/
-/*}*/
+#header_img {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
 
